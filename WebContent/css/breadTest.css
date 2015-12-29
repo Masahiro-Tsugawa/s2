@@ -1,0 +1,9 @@
+li {
+	/* liを横並び＆ブレットを消す */
+	display: inline;
+}
+li:after{
+	/* liの後に記号追加 */
+	content:" > ";
+	
+}

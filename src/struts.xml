@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" 
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<package name="com.internousdev.struts2.action" extends="struts-default,json-default">
+
+		<action name="LoginAction" class="com.internousdev.struts2.action.LoginAction"
+			method="execute">
+			<result name="success">loginSuccess.jsp</result>
+			<result name="error">loginFailed.jsp</result>
+			<result name="input">login.jsp</result>
+		</action>
+		
+		<action name="CreateUserAction" class="com.internousdev.struts2.action.CreateUserAction"
+			method="execute">
+			<result name="success">createUserCheck.jsp</result>
+			<result name="error">createUser.jsp</result>
+			<result name="input">createUser.jsp</result>
+		</action>
+		<action name="test" class="com.internousdev.struts2.action.TestAction"
+			method="execute">
+			<result name="success" type="json"><param name="root">list</param></result>
+		</action>
+		
+		<action name="comment_up" class="com.internousdev.struts2.action.commentUp"
+		method="execute">
+		<result name="success" type="json"><param name="root">comment_up</param></result>
+		</action>
+		<!-- <param name="root">creatUser.jsp</param> -->
+		
+		<!-- ECTest -->
+		<action name="CreateUser2Action" class="com.internousdev.struts2.action.CreateUser2Action"
+			method="execute">
+			<result name="success">create_user_check.jsp</result>
+			<result name="error">CriateUser.jsp</result>
+			<result name="input">CriateUser.jsp</result>
+		</action>
+			<action name="RegisterUserAction" class="com.internousdev.struts2.action.RegisterUserAction"
+			method="execute">
+			<result name="success">create_user_end.jsp</result>
+			<result name="error">CriateUser.jsp</result>
+			<result name="input">CriateUser.jsp</result>
+		</action>
+		
+		<action name="GoCreateUser" class="com.internousdev.struts2.action.GoCreateUserAction"
+			method="execute">
+			<result name="success">CriateUser.jsp</result>
+			<result name="error">CriateUser.jsp</result>
+			<result name="input">CriateUser.jsp</result>
+		</action>
+		
+		<action name="LoginUser" class="com.internousdev.struts2.action.LoginUserAction"
+			method="execute">
+			<result name="success" type="json"><param name="root">userId</param></result>
+			<result name="error"><param name="root">false</param></result>
+		</action>
+		
+		<action name="SessionClear" class="com.internousdev.struts2.action.SessionClearAction" method="execute">
+			<result name="success">postTest.jsp</result>
+		</action>
+		
+		
+
+<!-- コメントサンプル -->
+	</package>
+</struts>

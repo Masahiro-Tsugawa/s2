@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#myForm').submit(function(event){
+		// HTMLでの送信をキャンセル
+        event.preventDefault();
+		var from = $('#myForm')
+		$.ajax({
+			type: 'post',
+			url:''
+			data:
+			
+		})
+	})
+})
+</script>
+</head>
+<body>
+<form id="myForm" name="myForm" method="post" action="CreateUserAction">
+<input type="text" name="text" id="formText"/>
+<input type="submit" id="submitBtn" value="そうしん！" />
+</form>
+</body>
+</html>

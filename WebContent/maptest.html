@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Google Map Sample</title>
+
+<script src="http://code.jquery.com/jquery-2.0.0.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+	google.load("maps", "3.4", {
+		other_params : "sensor=false&language=jp"
+	});
+</script>
+<script src="jquery.googlemap.js"></script>
+<script type="text/javascript">
+	$(function() {
+
+		$("#map").googleMap({
+
+			coords : [ 35.703785, 139.767056 ], // GPS coords
+			zoom : 18,
+			title : 'インターノウス', // Title
+		});
+		$("#map").addMarker({
+			coords : [ 35.703785, 139.767056 ], // GPS coords
+			title : 'インターノウス', // Title
+		});
+	})
+</script>
+
+
+</head>
+
+<body>
+
+
+	<div id="map" style="width: 250px; height: 300px;"></div>
+
+</body>
+</html>

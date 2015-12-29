@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+<script type="text/javascript"
+	src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	
+<title>Ajax Test</title>
+
+<script type="text/javascript">
+	$(function() {
+		$("#button01").click(function() {
+			$.ajax({
+				url : "GoogleMapTest.html",
+				dataType : "html",
+			}).done(function(data) {
+				 $("#testdiv").html(data);
+			}).fail(function(data) {
+				 // ...
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<input id="button01" type="button" value="Googleマップ表示" />
+	<div id="testdiv"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DTD(文書型定義) -->
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+ "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+	<!-- 検証するフィールド -->
+	<field name="id">
+		<!-- 検証の形式 -->
+		<field-validator type="requiredstring">
+			<message>ID(メールアドレス)を入力してください</message>
+		</field-validator>
+	</field>
+
+	<!-- passチェック -->
+	<field name="password">
+		<!-- 空欄チェック -->
+		<field-validator type="requiredstring">
+			<message>パスワードを入力してください</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="regex"><![CDATA[([0-9a-z]{8,9})]]></param>
+			<message>パスワードは半角英数小文字8~16桁で入力してください</message>
+		</field-validator>
+	</field>
+	
+	<!--  -->
+
+
+
+</validators>
